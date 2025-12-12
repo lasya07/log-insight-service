@@ -3,6 +3,7 @@ package com.ai_insight_service.log_analyzer.client;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Slf4j
 @Component
+@Primary
 public class OpenAiChatLlmClient implements LlmClient{
     private final WebClient.Builder builder;
 
